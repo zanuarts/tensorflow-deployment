@@ -5,10 +5,11 @@ import tensorflow as tf
 app = Flask(__name__)
 model = tf.keras.models.load_model('fashion-mnist/1')
 
-@app.route('/predict', method=['POST'])
-def predict():
+@app.route('/predict', methods=['POST'])
+def predicts():
     print(request.headers)
-    instances = request.json['instances']
+    instances = request.json["data"]
+    print(instances)
     result = model.predict(instances)
     return {"predictions" : result.tolist()}, 200
 
