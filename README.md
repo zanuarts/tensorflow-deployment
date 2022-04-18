@@ -26,7 +26,7 @@ This project contains the Container Based Deployment:
     If you are using Visual Studio Code for code development and run notebook, you can install and use Jupyter Notebook extension. Otherwise, you can install jupyter notebook on your machine by running:
     
     ```
-    pip install jupyterlab
+    jupyter lab
     ```
     
     Then, you can go running all the command on the notebook
